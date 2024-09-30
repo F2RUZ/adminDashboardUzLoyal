@@ -1,0 +1,62 @@
+// Navbar container
+.navbar {
+  display: flex;
+  justify-content: space-between; // Elementlarni joylashtirish
+  align-items: center; // Vertikal markazlash
+  background-color: #34495e; // Navbar fon rangi
+  padding: 10px 20px; // Navbar ichki bo'shligi
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Navbar uchun soyali effekt
+
+  &-out {
+    font-size: 30px;
+    cursor: pointer;
+  }
+  &__logo {
+    font-size: 1.5rem; // Logo o'lchami
+    font-weight: bold;
+    color: #ecf0f1; // Matn rangi
+  }
+
+  &__menu {
+    display: flex; // Menyu elementlarini qator bo'yicha joylashtirish
+    list-style-type: none; // Ro'yxat belgilari
+    padding: 0;
+    margin: 0;
+
+    &-item {
+      padding: 10px 15px; // Menyu elementlari uchun ichki bo'shliq
+      cursor: pointer; // Ko'rsatgich
+      color: #ecf0f1; // Matn rangi
+      transition: background-color 0.3s ease; // Hover animatsiyasi
+
+      &:hover {
+        background-color: #1abc9c; // Hover holatidagi fon rangi
+      }
+
+      &--active {
+        background-color: #1abc9c; // Faol menyu elementi
+      }
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center; // Foydalanuvchi ma'lumotlarini markazlash
+    color: #ecf0f1; // Foydalanuvchi rangi
+    font-size: 1rem; // Foydalanuvchi o'lchami
+
+    &__avatar {
+      width: 35px; // Avatar kengligi
+      height: 35px; // Avatar balandligi
+      border-radius: 50%; // Yumshoq burchaklar
+      margin-right: 10px; // Avatar va foydalanuvchi nomi o'rtasidagi masofa
+    }
+  }
+}
+
+// Media query responsiv dizayn
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; // Kichik ekranlar uchun vertikal joylash
+  }
+}

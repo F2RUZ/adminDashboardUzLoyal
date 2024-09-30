@@ -1,0 +1,26 @@
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.loader {
+  border: 4px solid #f3f3f3; /* Loaderning tashqi qismi */
+  border-top: 4px solid #3498db; /* Harakatlanuvchi qismi */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite; /* Doimiy aylanadigan animatsiya */
+}
+
+/* Aylanish animatsiyasi */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

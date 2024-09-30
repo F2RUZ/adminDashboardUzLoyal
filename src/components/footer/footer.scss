@@ -1,0 +1,32 @@
+// Footer container
+.footer {
+  background-color: #2c3e50; // Footer fon rangi
+  color: #ecf0f1; // Matn rangi
+  padding: 20px; // Footer ichki bo'shligi
+  text-align: center; // Matn markazlash
+  position: relative; // To'liq sahifada joylash
+  bottom: 0; // Footer pastki qismda joylash
+  width: 100%; // Butun kenglikni egallash
+
+  &__text {
+    font-size: 0.9rem; // Matn o'lchami
+    margin: 0; // Margin o'rnatmaslik
+  }
+
+  &__link {
+    color: #1abc9c; // Havolalar rangi
+    text-decoration: none; // Chiziqni olib tashlash
+    transition: color 0.3s ease; // Hover animatsiyasi
+
+    &:hover {
+      color: #ecf0f1; // Hover holatidagi rangi
+    }
+  }
+}
+
+// Media query responsiv dizayn
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px; // Kichik ekranlar uchun ichki bo'shliq
+  }
+}
